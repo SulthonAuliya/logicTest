@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Pencarian gaha dan harimau</title>
+    </head>
+    <body>
+        keyword: gajah, serigala <br><br>
+        masukan text <br>
+        <textarea type="text" id="textTarget" cols="50"></textarea>
+
+        <button onclick="cari()">Submit</button>
+        <p id="hasil"></p>
+    </body>
+
+    <script>
+        function cari(){
+            text = document.getElementById("textTarget").value;
+            const result = text.match(/gajah|serigala/g).toString();
+            var hasil = result.replace(/,/g, '-');
+            document.getElementById("hasil").innerHTML = hasil;
+            
+        }
+    </script>
+</html>

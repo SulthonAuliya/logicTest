@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>Bilangan terkecil </title>
+    </head>
+    <body>
+        masukan angka (gunakan spasi sebagai pemisah antara masing masing angka) <br> <br>
+        <input type="text" id="inputAngka" style="width: 300px;" placeholder="masukan angka">
+
+        <button onclick="hitung()">Submit</button>
+    </body>
+    <script>
+        
+
+        function hitung(){
+            var number = document.getElementById("inputAngka").value;
+            const result = number.match(/\d+/g).toString();
+            
+            
+            function findLowest(n, xs) {
+                return xs.indexOf(n) < 0 ? n : findLowest(n + 1, xs);
+            };
+
+            var x = findLowest(1, result);
+
+            
+            document.write("starting number ["+result+"] <br><br>");
+            document.write("angka terkecil = "+x);
+        }
+
+        
+    </script>
+</html>
